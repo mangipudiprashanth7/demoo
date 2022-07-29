@@ -1,0 +1,53 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;600;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap");
+
+:root {
+      --primary-color: #111827;
+      --secondary-color: #374151;
+      --footer-items-color: #D1D5DB;
+  }
+  html{
+  height: 100%;
+}
+
+body {
+  font-family: 'Permanent Marker', cursive;
+  color: var(--primary-color);
+}
+
+.navigation {
+    background-color: white;
+    color: var(--primary-color);
+}
+
+.navigation-header {
+    font-weight: bold;
+    font-size: xx-large;
+    color: var(--secondary-color);
+}
+
+.navigation-header {
+    text-align: center;
+}
+.form-signin {
+  width: 100%;
+  max-width: 330px;
+  padding: 2rem;
+  margin: 0 auto;
+}
+
+.form-signin .form-control {
+  position: relative;
+  box-sizing: border-box;
+  height: auto;
+  padding: 10px;
+  font-size: 16px;
+}
+.form-signin .form-control:focus {
+  z-index: 2;
+}
+.form-signin input[type="file"] {
+  margin-bottom: -1px;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+}

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Brain Tumor Segmentation</title>
+  <link href="/static/css/main.css" rel="stylesheet" type="text/css">
+
+  <style>
+    body {
+      background-image: url('/static/19366.jpg');
+      
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      background-size: cover;
+      @import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
+      font-family: 'Permanent Marker', cursive;
+      color: var(--primary-color);
+    }
+    </style>
+  
+</head>
+
+<body>
+  <div class="navigation">
+    <div class="navigation-header">MENINGIOMA SEGMENTATION</div>
+  </div>
+  <form class="form-signin" method="POST" enctype="multipart/form-data">
+    <h1 class="h3 mb-3 font-weight-normal">Upload image here</h1>
+    <input type="file" name="inputImage" class="form-control" required autofocus>
+    </div>
+    <br>
+    <button class="btn btn-lg btn-primary btn-block" type="submit">Predict</button>
+  </form>
+  <div>
+    {% if imageInput and imageOutput %}
+    <table align="center">
+      <tr>
+        <td><img src="/static/uploads/{{imageInput}}" border: 10px solid #777;></td>
+        <td><img src="/static/output/{{imageOutput}}" border: 10px solid #777;></td>
+      </tr>
+      <tr>
+        <td align="center"><b>Input Image</b></td>
+        <td align="center"><b>Segmented Image</b></td>
+        </td>
+      </tr>
+    </table>
+    {% endif %}
+    {% if pred_prob and pred %}
+    <h3 style="text-align: center;"><span style="color: turquoise;">predictedLabel :</span>{{pred}} <span
+        style="color: turquoise;">predictionAccuracy :</span> {{pred_prob}}</h3>
+    {% endif %}
+  </div>
+
+</body>
+
+</html>
