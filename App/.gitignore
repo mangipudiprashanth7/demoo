@@ -140,7 +140,7 @@ cython_debug/
 
 # models folders
 
-# detection/
+detection/
 # segmentation/
 static/uploads/
 static/output/
